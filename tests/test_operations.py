@@ -1,6 +1,6 @@
 import pytest
 
-from operations import add, divide, multiply, power, subtract
+from calculator.operations import add, divide, multiply, power, subtract
 
 
 def test_add() -> None:

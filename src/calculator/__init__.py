@@ -1,3 +1,3 @@
-from src.calculator.operations import add, divide, multiply, power, subtract
+from calculator.operations import add, divide, multiply, power, subtract
 
 __all__ = ["add", "subtract", "multiply", "divide", "power"]
