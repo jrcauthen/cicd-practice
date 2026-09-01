@@ -39,7 +39,9 @@ jobs:
         run: ruff format --check .
 
       - name: Type check
-        run: mypy src
+        run: |
+          export PYTHONPATH=src
+          mypy src
 
       - name: Run tests
         run: |
