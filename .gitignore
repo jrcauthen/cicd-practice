@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checking
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Environment variables
+.env
+.env.*
+!.env.example

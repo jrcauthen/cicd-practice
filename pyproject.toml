@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cicd-practice"
+version = "0.1.0"
+description = "A small project for learning CI/CD with GitHub Actions"
+requires-python = ">=3.12"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "ruff>=0.8",
+    "mypy>=1.13",
+    "build>=1.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -p no:launch_testing -p no:launch_testing_ros -p no:generate_parameter_library_py"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
